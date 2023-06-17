@@ -8,5 +8,14 @@ Hint - use Date class exposed in JS
 */
 
 function calculateTime(n) {
-    return 0.01;
+  const timestart = Date.now();
+  let res = calSum(n);
+  const timeEnd = Date.now();
+  return timeEnd - timestart;
 }
+
+let calSum = (n) => (n * (n + 1)) / 2;
+
+console.log(
+  calculateTime(100000000000000000000000000000000000000000000000000000000000)
+);
